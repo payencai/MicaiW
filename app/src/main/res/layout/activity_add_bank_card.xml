@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.AddBankCardOrZFBActivity">
+
+    <include layout="@layout/include_title_head" />
+
+    <EditText
+        android:id="@+id/accountInput"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="银行卡号"
+        android:paddingLeft="@dimen/margin_15dp"
+        android:singleLine="true"
+        android:textCursorDrawable="@null"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/color_d2" />
+
+    <LinearLayout
+        android:id="@+id/bankLayout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/margin_15dp">
+
+        <ImageView
+            android:id="@+id/bankLogo"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="6dp"
+            android:src="@mipmap/logo"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/bankName"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:hint="银行名称"
+            android:singleLine="true"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/color_d2" />
+
+    <EditText
+        android:id="@+id/phoneInput"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="银行卡预留手机号"
+        android:paddingLeft="@dimen/margin_15dp"
+        android:singleLine="true"
+        android:textCursorDrawable="@null"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/submitCard"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/shape_rectangle_circle_blue"
+        android:text="确定"
+        android:textColor="#ffffff" />
+
+
+</LinearLayout>

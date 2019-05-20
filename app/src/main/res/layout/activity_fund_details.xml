@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.FundDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="42dp">
+
+        <ImageView
+            android:id="@+id/backImg"
+            android:layout_width="24dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_text_12dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:id="@+id/titleHead"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="投哪网"
+            android:textColor="@color/color_333"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:src="@mipmap/logo" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/through"
+        android:layout_below="@+id/layout1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/platformBenner"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:src="@color/color_333" />
+
+            <TextView
+                android:id="@+id/platformName"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:gravity="center"
+                android:text="光大中国制造2025"
+                android:textColor="@color/color_333"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/brightSpot"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:text="潜力强+业绩靓+口碑好"
+                android:textColor="#0090ff"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/annualRate"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:gravity="center"
+                android:text="+46.99%"
+                android:textColor="#ff0000"
+                android:textSize="32sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="近一年涨跌幅"
+                android:textColor="@color/color_333"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/platformUrl"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginBottom="36dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginRight="36dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/shape_rectangle_circle_blue"
+                android:text="直达链接"
+                android:textColor="#FFFFFF" />
+
+
+            <ImageView
+                android:id="@+id/platformDetailsImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

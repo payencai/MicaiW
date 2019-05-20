@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <!--基金推荐 1 begin-->
+    <View
+        style="@style/follow_split_line"
+        android:layout_height="1dp" />
+    <FrameLayout
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/margin_3dp"
+        android:layout_marginBottom="@dimen/margin_3dp"
+        android:layout_marginLeft="@dimen/margin_15dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/length_view_30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:text="爱基金"
+            android:textSize="@dimen/text_size_14sp"
+            android:textColor="@color/tv_666" />
+    </FrameLayout>
+    <LinearLayout
+        android:layout_marginTop="@dimen/margin_2dp"
+        android:layout_marginBottom="@dimen/margin_15dp"
+        android:layout_marginLeft="@dimen/margin_15dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/length_view_55dp">
+        <LinearLayout
+            android:layout_marginBottom="@dimen/margin_2dp"
+            android:layout_width="0dp"
+            android:layout_weight="12"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|left"
+                    android:text="+40.36%"
+                    android:textSize="@dimen/text_size_22sp"
+                    android:textColor="@color/red_54" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|left"
+                    android:text="近一年涨跌幅度"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:textColor="@color/tv_999" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <View
+                    style="@style/vertical_split_line"
+                    android:layout_gravity="center"
+                    android:layout_width="1dp" />
+            </FrameLayout>
+        </LinearLayout>
+        <FrameLayout
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_3dp"
+            android:layout_marginBottom="@dimen/margin_2dp"
+            android:layout_width="0dp"
+            android:layout_weight="13"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|left"
+                android:text="一门五虎将"
+                android:textSize="@dimen/text_size_17sp"
+                android:textColor="@color/tv_333" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:text="长期霸占收益排行榜"
+                android:textSize="@dimen/text_size_14sp"
+                android:textColor="@color/tv_999" />
+        </FrameLayout>
+    </LinearLayout>
+    <!--基金推荐 1 end-->
+
+</LinearLayout>

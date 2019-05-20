@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/item"
+    android:layout_height="59dp">
+
+    <ImageView
+        android:id="@+id/serviceLogoImg"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="8dp"
+        android:src="@mipmap/logo" />
+
+    <TextView
+        android:id="@+id/serviceName"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/length_view_20dp"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@id/serviceLogoImg"
+        android:gravity="center"
+        android:text="米财帮帮"
+        android:textColor="@color/color_333"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="12dp"
+        android:layout_below="@id/serviceName"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/serviceLogoImg"
+        android:text="欢迎使用米财帮帮人工服务"
+        android:textColor="#999999"
+        android:textSize="10sp" />
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@mipmap/ic_mine_item_bg">
+
+    <cn.micaiw.mobile.custom.DotView
+        android:id="@+id/dotView"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="14dp"
+        android:background="@drawable/shape_dot_bg" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/dotView"
+        android:gravity="center"
+        android:text="投资记录"
+        android:textColor="@color/color_333"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="30dp"
+        android:src="@mipmap/ic_mine_item_bg_img" />
+
+    <TextView
+        android:id="@+id/viceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_toRightOf="@+id/dotView"
+        android:gravity="center"
+        android:text="正在持有产品记录"
+        android:textColor="#999999"
+        android:textSize="12sp" />
+</RelativeLayout>

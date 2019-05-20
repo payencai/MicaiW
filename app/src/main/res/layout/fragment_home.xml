@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.micaiw.mobile.custom.SmartScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/smartScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_title_head" />
+
+        <LinearLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.victor.loading.rotate.RotateLoading
+                android:id="@+id/rotateloading"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                app:loading_color="#000000"
+                app:loading_width="2dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="加载中..."
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="172dp">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/carouselVP"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="#f7e908"></android.support.v4.view.ViewPager>
+
+            <LinearLayout
+                android:id="@+id/dot_layout"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_alignBottom="@id/carouselVP"
+                android:gravity="center"
+                android:orientation="horizontal"></LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:layout_marginBottom="5dp"
+            android:background="#fefefe"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/news_layout"
+                android:background="@mipmap/ic_home_title_bg"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:layout_marginRight="@dimen/margin_15dp"
+                android:layout_marginTop="@dimen/margin_10dp">
+                <ViewFlipper
+                    android:elevation="@dimen/margin_5dp"
+                    android:id="@+id/vf"
+                    android:layout_marginLeft="100dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:autoStart="true"
+                    android:flipInterval="3000"
+                    android:layout_marginRight="@dimen/margin_30dp"
+                    android:inAnimation="@anim/push_up_in"
+                    android:outAnimation="@anim/push_up_out"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_50dp">
+
+                </ViewFlipper>
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img1"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:layout_marginLeft="16dp"
+                        android:src="@mipmap/icon_common_disabled2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/accumulative"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/length_view_30dp"
+                        android:layout_marginLeft="12dp"
+                        android:text=""
+                        android:textColor="#F76B54"
+                        android:textSize="@dimen/text_size_18sp"
+                        app:layout_constraintLeft_toRightOf="@id/img1"
+                        app:layout_constraintTop_toTopOf="@id/img1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:text="累计发放返现"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/text_size_12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/img1"
+                        app:layout_constraintLeft_toRightOf="@id/img1" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:layout_marginLeft="16dp"
+                        android:src="@mipmap/icon_disabled_common"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/investmentUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/length_view_30dp"
+                        android:layout_marginLeft="12dp"
+                        android:text=""
+                        android:textColor="#F76B54"
+                        android:textSize="@dimen/text_size_18sp"
+                        app:layout_constraintLeft_toRightOf="@id/img2"
+                        app:layout_constraintTop_toTopOf="@id/img2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:text="累计投资人数"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/text_size_12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/img2"
+                        app:layout_constraintLeft_toRightOf="@id/img2" />
+                </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="1dp"
+            android:background="#fefefe"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="P2P推荐"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:descendantFocusability="blocksDescendants"
+           >
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recommendP2PRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fefefe"></android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="5dp"
+            android:background="#fefefe"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="基金推荐"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:descendantFocusability="blocksDescendants">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recommendFundRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fefefe"></android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</cn.micaiw.mobile.custom.SmartScrollView>

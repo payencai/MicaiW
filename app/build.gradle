@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '27.0.3'
+//    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "cn.micaiw.mobile"
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 2
+        versionName "2.5"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    dexOptions {
+        preDexLibraries = false
+        incremental false
+        javaMaxHeapSize "4g"
+    }
+    lintOptions {
+        disable "ResourceType"
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    //配置keystore签名
+    signingConfigs {
+        release {
+//            storeFile file("D:\\lt\\sign\\micaiw.jks")
+//            storePassword "yckj123"
+//            keyAlias "micaiwkey"
+//            keyPassword "yckj123"
+            storeFile file("D:\\lt\\sign\\MiCai.jks")
+            storePassword "micai2018"
+            keyAlias "micaikey"
+            keyPassword "micai2018"
+        }
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+}
+
+dependencies {
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:support-v4:26.1.0'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:26.+'
+    //    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    implementation project(':nohttp')
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.changelcai.mothership:mothership:2.0.1'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    implementation 'com.google.code.gson:gson:2.3.1'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation files('libs/volley.jar')
+    implementation 'com.facebook.fresco:fresco:0.11.0'
+    implementation files('libs/open_sdk_r6008_lite.jar')
+    implementation project(path: ':PullToRefresh')
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.android.support:cardview-v7:26.0.0-alpha1'
+    //微信集成
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    //    implementation 'com.foamtrace:photopicker:1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation files('libs/okhttputils-2_6_2.jar')
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.squareup.picasso:picasso:2.3.2'
+    implementation 'com.victor:lib:1.0.4'
+    //加载的View控件
+    implementation 'com.android.support:design:26.0.0-alpha1'
+    compile 'com.teprinciple:updateapputils:1.3'
+}

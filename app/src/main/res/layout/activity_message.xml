@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:orientation="vertical">
+
+    <include layout="@layout/part_titlebar_only_back"></include>
+
+    <RelativeLayout
+        android:id="@+id/itemHead"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff">
+
+        <ImageView
+            android:id="@+id/serviceLogoImg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="8dp"
+            android:src="@mipmap/ic_message_logo_bg" />
+
+        <TextView
+            android:id="@+id/serviceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@id/serviceLogoImg"
+            android:gravity="center"
+            android:text="米财帮帮"
+            android:textColor="@color/color_333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/serviceName"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/serviceLogoImg"
+            android:text="欢迎使用米财帮帮人工服务"
+            android:textColor="#999999"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/rvFrameLayout"
+        android:layout_width="match_parent"
+        android:background="#ececec"
+        android:layout_height="match_parent"></FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/message_rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="14dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:visibility="gone"></android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.VerifyRegisterActivity">
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/include_title_head" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="94dp"
+        android:layout_height="94dp"
+        android:layout_below="@id/head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:src="@mipmap/logo" />
+
+
+    <TextView
+        android:id="@+id/showPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_centerHorizontal="true"
+        android:text="17612347788"
+        android:textColor="#999999"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/showHintText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/showPhoneNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:text="已向该手机发送了验证码"
+        android:textColor="#999999"
+        android:textSize="14sp" />
+
+
+    <cn.micaiw.mobile.common.customview.VerificationCodeInput
+        android:id="@+id/inputVerify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/showHintText"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="16dp"
+        android:digits="1234567890."
+        app:box="6"
+        app:box_bg_focus="@drawable/verification_edit_bg_focus"
+        app:box_bg_normal="@drawable/verification_edit_bg_normal"
+        app:child_h_padding="5dp" />
+
+    <TextView
+        android:id="@+id/againSendVerify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputVerify"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:enabled="false"
+        android:text="重新获取"
+        android:textColor="#999999"
+        android:textSize="14sp" />
+
+
+    <EditText
+        android:id="@+id/inputPsw"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/againSendVerify"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="@null"
+        android:gravity="center"
+        android:hint="6-26位密码，需组合数字，字母或符号"
+        android:maxLength="26"
+        android:maxLines="1"
+        android:textColor="#333333"
+        android:textColorHint="#999999"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/text_size_14sp"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/showPswImg"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_above="@+id/view1"
+        android:layout_alignRight="@id/view1"
+        android:src="@mipmap/logo"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="270dp"
+        android:layout_height="1dp"
+        android:background="@color/lines"
+        android:layout_below="@+id/inputPsw"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="280dp"
+        android:layout_height="39dp"
+        android:layout_below="@id/view1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shape_rectangle_circle_blue"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="330dp"
+    android:background="@drawable/shape_rectangle_circle_side_bg"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/signCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="已累计签到1天"
+            android:textColor="@color/color_333"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textBreakSign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signCount"
+            android:layout_centerHorizontal="true"
+            android:text="断签重置"
+            android:textColor="@color/color_999"
+            android:textSize="18sp" />
+
+        <cn.micaiw.mobile.custom.WeekSignFormView
+            android:id="@+id/weekSignFrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/textActivityRule"
+            android:layout_below="@id/textBreakSign" />
+
+        <TextView
+            android:id="@+id/textActivityRule"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="活动规则"
+            android:textColor="@color/color_999"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</RelativeLayout>

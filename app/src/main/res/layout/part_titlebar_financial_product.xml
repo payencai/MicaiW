@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 标题栏 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/part_title_bar_simple_rv"
+    style="@style/CommonTitleBar"
+    android:layout_alignParentTop="true">
+
+    <cn.micaiw.mobile.view.ItemSwitchButton
+        android:id="@+id/titlebar_swicth_btn"
+        style="@style/CommonTitleBarText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="银行"
+        android:textColor="@color/color_333"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/titlebar_msg_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_10dp"
+        android:src="@mipmap/message" />
+
+</RelativeLayout>

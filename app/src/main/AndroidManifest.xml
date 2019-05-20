@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.micaiw.mobile">
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 拍照 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/micai_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/micai_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="cn.micaiw.mobile.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+        <!-- Android 唯一Appkey为：5b0bb197a40fa30f6b000118 -->
+        <activity android:name=".activity.LoginActivity" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.VerifyRegisterActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".activity.TestActivity" />
+        <activity
+            android:name=".activity.MessageActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.GuidanceActivity" />
+        <activity android:name=".activity.ServiceActivity" />
+        <activity android:name=".activity.MsgDetailsActivity" />
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.MoneyDetailsActivity" />
+        <activity android:name=".activity.DepositsHistoryActivity" />
+        <activity android:name=".activity.IntegralManagerActivity" />
+        <activity android:name=".activity.ProxyCentreActivity" />
+        <activity android:name=".activity.PayeeAccountActivity" />
+        <activity android:name=".activity.PlatformIntroduceActivity" />
+        <activity android:name=".activity.MCaiHeadlineActivity" />
+        <activity android:name=".activity.WebViewActivity" />
+        <activity android:name=".activity.FundDetailsActivity" />
+        <activity android:name=".activity.P2PDetailsActivity" />
+        <activity android:name=".activity.IntegraexChangelActivity" />
+        <activity android:name=".activity.RetrievePswActivity" />
+        <activity android:name=".activity.UserInfoDetailsActivity" />
+        <activity android:name=".activity.AmendLoginPswActivity" />
+        <activity android:name=".activity.SettingActivity" />
+        <activity android:name=".activity.PlatformDetailsActivity" />
+        <activity android:name=".activity.AddBankCardOrZFBActivity" />
+        <activity android:name=".activity.WriteReturnMoneyActivity" />
+        <activity android:name=".activity.AllPlatfromInfoActivity" />
+        <activity android:name=".activity.IntegralRuleActivity" />
+        <!-- 友盟第三方登录 -->
+        <!-- 微信 -->
+        <!-- <activity -->
+        <!-- android:name=".wxapi.WXEntryActivity" -->
+        <!-- android:configChanges="keyboardHidden|orientation|screenSize" -->
+        <!-- android:exported="true" /> -->
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:enabled="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="sdksample" />
+            </intent-filter>
+        </activity>
+
+        <!-- QQ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1106873456" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".activity.BoundTelActivity" />
+        <activity android:name=".activity.UseProtocolActivity" />
+        <!-- <activity android:name=".wxapi.WXEntryActivity"></activity> -->
+        <activity android:name=".activity.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.WebUrlActivity" />
+        <activity android:name=".activity.WebNextActivity" />
+        <activity android:name=".activity.WebShopActivity"></activity>
+    </application>
+
+</manifest>

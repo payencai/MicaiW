@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.BoundTelActivity">
+
+    <!--<include-->
+    <!--android:id="@+id/head"-->
+    <!--layout="@layout/include_title_head" />-->
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="#fffefefe">
+
+        <ImageView
+            android:id="@+id/backImg"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/back"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="绑定账号"
+            android:textColor="#FF333333"
+            android:textSize="@dimen/text_size_16sp" />
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="94dp"
+        android:layout_height="94dp"
+        android:layout_below="@id/head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:src="@mipmap/logo" />
+
+    <EditText
+        android:id="@+id/editPhoneNumber"
+        android:layout_width="@dimen/length_view_158dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="184dp"
+        android:background="@null"
+        android:hint="请输入手机号码"
+        android:inputType="number"
+        android:maxLength="11"
+        android:textColor="#999999"
+        android:textColorHint="#999999"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/text_size_14sp" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="170dp"
+        android:layout_height="0.75dp"
+        android:layout_below="@+id/editPhoneNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/color_333" />
+
+    <EditText
+        android:id="@+id/editPswInput"
+        android:layout_width="@dimen/length_view_158dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:background="@null"
+        android:hint="请输入密码"
+        android:textColor="#999999"
+        android:textColorHint="#999999"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/text_size_14sp"
+        android:visibility="visible" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="170dp"
+        android:layout_height="0.75dp"
+        android:layout_below="@+id/editPswInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_333"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/hintText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:text="此手机已拥有账号，请直接登录"
+        android:textColor="#999999"
+        android:textSize="@dimen/text_size_14sp"
+        android:visibility="gone" />
+
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/view1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/shape_rectangle_circle_blue2"
+        android:text="下一步"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+   <TextView 
+       android:id="@+id/item_swicth_btn_1"
+       android:layout_width="0dp"
+       android:layout_weight="1"
+       android:padding="0dp"
+       android:layout_height="wrap_content"
+       android:background="@mipmap/common_segmentedcontrol_left_on"
+       android:textColor="#ffffff"
+       android:gravity="center"
+       android:textSize="18sp"
+       android:text="P2P" />
+   
+   <TextView 
+       android:id="@+id/item_swicth_btn_2"
+       android:layout_width="0dp"
+       android:layout_weight="1"
+       android:layout_height="wrap_content"
+       android:padding="0dp"
+       android:background="@mipmap/common_segmentedcontrol_center_off"
+       android:gravity="center"
+       android:textSize="18sp"
+       android:textColor="#4A87ED"
+       android:text="基金" />
+       
+   <TextView 
+       android:id="@+id/item_swicth_btn_3"
+       android:layout_width="0dp"
+       android:layout_weight="1"
+       android:layout_height="wrap_content"
+       android:padding="0dp"
+       android:background="@mipmap/common_segmentedcontrol_right_off"
+       android:gravity="center"
+       android:textColor="#4A87ED"
+       android:textSize="18sp"
+       android:text="结束" />
+
+</LinearLayout>

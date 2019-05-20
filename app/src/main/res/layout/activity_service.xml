@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:orientation="vertical"
+    tools:context=".activity.ServiceActivity">
+
+    <include layout="@layout/part_titlebar_only_back"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="42dp"
+            android:layout_marginLeft="42dp"
+            android:layout_marginRight="42dp"
+            android:layout_marginTop="42dp"
+            android:background="@drawable/shape_rectangle_circle_white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/service_bg_tx" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:gravity="center"
+                android:text="联系客服"
+                android:textColor="@color/color_333"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:text="我们将会全心全意为您提供满意周到的咨询服务，也希望您能支持和监督我们的服务。"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/telSericeBtn"
+                android:layout_width="228dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_rectangle_circle_blue"
+                android:text="拨打客服热线"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/text_size_17sp" />
+
+            <TextView
+                android:id="@+id/service1"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="QQ客服1"
+                android:textColor="#4B89EE"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/service2"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="QQ客服2"
+                android:textColor="#4B89EE"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/service3"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="QQ客服3"
+                android:textColor="#4B89EE"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".fragment.ActivityRuleFragment">
+
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/ic_red_packet" />
+
+
+    <TextView
+        android:id="@+id/moneyText"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:gravity="center"
+        android:text="50元现金"
+        android:textColor="@color/activityTextColor"
+        android:textSize="22sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:gravity="center"
+        android:text="好友投资就送"
+        android:textColor="@color/activityTextColor"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginRight="72dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_999" />
+
+    <TextView
+        android:id="@+id/activityRules"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="1、邀请好友注册得5元红包奖励 \t\n2、邀请好友通过米财钱包投资得10元红包奖励"
+        android:textColor="@color/activityTextColor" />
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 标题栏 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/part_title_bar_simple_rv"
+                style="@style/CommonTitleBar"
+                android:layout_alignParentTop="true">
+
+    <ImageButton
+        android:id="@+id/titlebar_btn_left"
+        style="@style/CommonTitleBarElement"
+        android:layout_width="30dp"
+        android:layout_marginLeft="5dp"
+        android:padding="3sp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/back" />
+
+
+    <TextView
+        android:id="@+id/titlebar_tv_title"
+        style="@style/CommonTitleBarText"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:textSize="17sp"
+        android:focusableInTouchMode="true"
+        android:scrollHorizontally="true"
+        android:text="米财钱包" />
+
+
+
+</RelativeLayout>
